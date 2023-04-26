@@ -1,0 +1,10 @@
+<Sysmon schemaversion="4.30">
+	<EventFiltering>
+		<RuleGroup name="" groupRelation="or">
+			<FileCreate onmatch="exclude">
+				<!--SECTION: Cleanmgr-->
+				<Image condition="is">C:\WINDOWS\system32\cleanmgr.exe</Image>
+			</FileCreate>
+		</RuleGroup>
+	</EventFiltering>
+</Sysmon>

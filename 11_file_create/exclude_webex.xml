@@ -1,0 +1,13 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--Webex Meetings-->
+               <Image condition="contains all">c:\Users;AppData\Local\WebEx;WebexHost.exe</Image> 
+               <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

@@ -1,0 +1,28 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--Edge uses this directory for updating-->
+               <Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Edge file viewer -->
+               <Image condition="contains all">C:\Program Files (x86)\Microsoft\EdgeWebView\Application;msedgewebview2.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Edge updater -->
+               <Image condition="is">C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Edge updater -->
+               <Image condition="contains all">C:\Users;AppData\Local\Microsoft;MicrosoftEdgeSetup.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>                
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

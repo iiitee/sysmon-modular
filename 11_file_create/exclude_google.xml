@@ -1,0 +1,13 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--Firefox uses this directory for updating-->
+               <Image condition="contains all">c:\Users;AppData\Local\Google;GoogleUpdateSetup.exe</Image> 
+               <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp;GoogleUpdateSetup.exe</TargetFilename>
+            </Rule>
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

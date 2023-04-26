@@ -1,0 +1,18 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--Citrix uses this directory-->
+               <Image condition="is">C:\Program Files (x86)\Citrix\ICA Client\Receiver\Receiver.exe</Image> 
+               <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Citrix updater -->
+               <Image condition="contains all">C:\Users;AppData\Local\Temp;CitrixReceiverUpdater.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>                 
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

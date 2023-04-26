@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.30">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ImageLoad onmatch="exclude">
+        <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files\PowerShell\7\pwsh.exe</Image>
+          <ImageLoaded condition="begin with">C:\Program Files\PowerShell\7\System.Management.Automation.dll</ImageLoaded>
+        </Rule>
+      </ImageLoad>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
