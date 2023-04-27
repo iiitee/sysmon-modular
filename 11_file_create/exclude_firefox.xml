@@ -12,6 +12,11 @@
                <Image condition="is">C:\Program Files\Mozilla Firefox\uninstall\helper.exe</Image> 
                <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
             </Rule>
+            <Rule groupRelation="and">
+               <!--Firefox updating-->
+               <Image condition="contains all">C:\Users\;\AppData\Local\Mozilla Firefox\uninstall\helper.exe</Image> 
+               <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+            </Rule>            
          </FileCreate>
       </RuleGroup>
    </EventFiltering>

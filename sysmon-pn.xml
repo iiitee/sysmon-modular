@@ -1443,8 +1443,16 @@
           <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
         </Rule>
         <Rule groupRelation="and">
+          <Image condition="contains all">C:\Users\;\AppData\Local\Mozilla Firefox\uninstall\helper.exe</Image>
+          <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
           <Image condition="contains all">c:\Users;AppData\Local\Google;GoogleUpdateSetup.exe</Image>
           <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp;GoogleUpdateSetup.exe</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
+          <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\chrome</TargetFilename>
         </Rule>
         <Image condition="is">C:\Windows\system32\igfxCUIService.exe</Image>
         <Image condition="is">C:\Program Files (x86)\Ivanti\Workspace Control\pfwsmgr.exe</Image>

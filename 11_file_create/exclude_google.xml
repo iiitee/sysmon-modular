@@ -3,9 +3,14 @@
       <RuleGroup name="" groupRelation="or">
          <FileCreate onmatch="exclude">
             <Rule groupRelation="and">
-               <!--Firefox uses this directory for updating-->
+               <!--Google uses this directory for updating-->
                <Image condition="contains all">c:\Users;AppData\Local\Google;GoogleUpdateSetup.exe</Image> 
                <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp;GoogleUpdateSetup.exe</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Google Chrome updating-->
+               <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\chrome</TargetFilename>
             </Rule>
          </FileCreate>
       </RuleGroup>
