@@ -1041,6 +1041,10 @@
           <OriginalFileName condition="is">scrobj.dll</OriginalFileName>
         </Rule>
         <Rule groupRelation="and">
+          <Image condition="contains all">C:\Windows\Microsoft.NET\Framework64;mscorsvw.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
+        </Rule>
+        <Rule groupRelation="and">
           <Image name="technique_id=T1137,technique_name=Office Application Startup" condition="end with">VSTOInstaller.exe</Image>
           <ImageLoaded condition="begin with">C:\Windows\</ImageLoaded>
         </Rule>
@@ -1398,11 +1402,11 @@
       <FileCreate onmatch="exclude">
         <Rule groupRelation="and">
           <Image condition="is">C:\Program Files (x86)\Citrix\ICA Client\Receiver\Receiver.exe</Image>
-          <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+          <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
         </Rule>
         <Rule groupRelation="and">
-          <Image condition="contains all">C:\Users;AppData\Local\Temp;CitrixReceiverUpdater.exe</Image>
-          <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
+          <Image condition="contains all">C:\Users\;\AppData\Local\Temp\;\CitrixReceiverUpdater.exe</Image>
+          <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
         </Rule>
         <Image condition="is">C:\WINDOWS\system32\cleanmgr.exe</Image>
         <Image condition="is">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</Image>
@@ -1477,8 +1481,8 @@
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerRoleUsageCollector</TargetFilename>
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerCeipAssistant</TargetFilename>
         <Rule groupRelation="and">
-          <Image condition="contains all">c:\Users;AppData\Local\WebEx;WebexHost.exe</Image>
-          <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+          <Image condition="contains all">c:\Users\;\AppData\Local\WebEx\WebexHost.exe</Image>
+          <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\webexdelta\</TargetFilename>
         </Rule>
       </FileCreate>
     </RuleGroup>
