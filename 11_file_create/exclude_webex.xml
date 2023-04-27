@@ -4,8 +4,8 @@
          <FileCreate onmatch="exclude">
             <Rule groupRelation="and">
                <!--Webex Meetings-->
-               <Image condition="contains all">c:\Users;AppData\Local\WebEx;WebexHost.exe</Image> 
-               <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+               <Image condition="contains all">c:\Users\;\AppData\Local\WebEx\WebexHost.exe</Image> 
+               <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\webexdelta\</TargetFilename>
             </Rule>
          </FileCreate>
       </RuleGroup>
