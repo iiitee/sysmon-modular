@@ -4,6 +4,11 @@
 			<FileCreate onmatch="exclude">
 				<!--SECTION: Dell-->
 				<Image condition="is">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</Image>
+            <Rule groupRelation="and">
+               <!--Dell Supportassist -->
+               <Image condition="is">C:\Program Files\Dell\SupportAssistAgent\bin\FrameworkAgents\SupportAssistInstaller.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\SupportAssistAgent</TargetFilename>
+            </Rule>  				
 			</FileCreate>
 		</RuleGroup>
 	</EventFiltering>

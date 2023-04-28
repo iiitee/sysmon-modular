@@ -1411,6 +1411,10 @@
         <Image condition="is">C:\WINDOWS\system32\cleanmgr.exe</Image>
         <Image condition="is">C:\Program Files (x86)\Dell\CommandUpdate\InvColPC.exe</Image>
         <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files\Dell\SupportAssistAgent\bin\FrameworkAgents\SupportAssistInstaller.exe</Image>
+          <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\SupportAssistAgent</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
           <Image condition="is">C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe</Image>
           <TargetFilename condition="contains all">C:\Users;AppData\Local\Temp</TargetFilename>
         </Rule>
