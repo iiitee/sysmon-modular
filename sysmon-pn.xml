@@ -1458,6 +1458,10 @@
           <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
           <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\chrome</TargetFilename>
         </Rule>
+        <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files\HPPrintScanDoctor\HPPrinterHealthMonitor.exe</Image>
+          <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
+        </Rule>
         <Image condition="is">C:\Windows\system32\igfxCUIService.exe</Image>
         <Image condition="is">C:\Program Files (x86)\Ivanti\Workspace Control\pfwsmgr.exe</Image>
         <Image condition="is">C:\Program Files (x86)\RES Software\Workspace Manager\pfwsmgr.exe</Image>
