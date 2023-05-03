@@ -1497,6 +1497,10 @@
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerRoleUsageCollector</TargetFilename>
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerCeipAssistant</TargetFilename>
         <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\BackgroundDownload.exe</Image>
+          <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
           <Image condition="contains all">c:\Users\;\AppData\Local\WebEx\WebexHost.exe</Image>
           <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\webexdelta\</TargetFilename>
         </Rule>
