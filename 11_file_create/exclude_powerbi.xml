@@ -4,7 +4,7 @@
          <FileCreate onmatch="exclude">
             <Rule groupRelation="and">
                <!--HP printer uses this directory-->
-               <Image condition="is">C:\Program Files\HPPrintScanDoctor\HPPrinterHealthMonitor.exe</Image> 
+               <Image condition="is">C:\Program Files\Microsoft Power BI Desktop RS\bin\PBIDesktop.exe</Image> 
                <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
             </Rule>
          </FileCreate>

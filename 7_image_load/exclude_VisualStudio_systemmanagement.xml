@@ -1,0 +1,12 @@
+<Sysmon schemaversion="4.30">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ImageLoad onmatch="exclude">
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.SettingsHost.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
+        </Rule>
+      </ImageLoad>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>

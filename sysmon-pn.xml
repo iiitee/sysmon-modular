@@ -1080,6 +1080,10 @@
           <Image condition="is">C:\Program Files\PowerShell\7\pwsh.exe</Image>
           <ImageLoaded condition="begin with">C:\Program Files\PowerShell\7\System.Management.Automation.dll</ImageLoaded>
         </Rule>
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.SettingsHost.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
+        </Rule>
       </ImageLoad>
     </RuleGroup>
     <!-- Event ID 8 == CreateRemoteThread - Excludes -->
@@ -1479,6 +1483,10 @@
         <Rule groupRelation="and">
           <Image condition="image">Outlook.exe</Image>
           <TargetFilename condition="contains">Roaming\Microsoft\Outlook\Outlook.xml</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="is">C:\Program Files\Microsoft Power BI Desktop RS\bin\PBIDesktop.exe</Image>
+          <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
         </Rule>
         <Image condition="is">c:\windows\system32\provtool.exe</Image>
         <Rule groupRelation="and">
