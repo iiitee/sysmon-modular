@@ -3,7 +3,7 @@
     <RuleGroup name="" groupRelation="or">
       <ImageLoad onmatch="exclude">
         <Rule groupRelation="and">
-          <Image condition="contains all">C:\Windows\Microsoft.NET\Framework64;mscorsvw.exe</Image>
+          <Image condition="contains all">C:\Windows\Microsoft.NET\Framework;mscorsvw.exe</Image>
           <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
         </Rule>
       </ImageLoad>
