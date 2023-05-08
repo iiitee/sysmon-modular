@@ -1,0 +1,18 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--CCH update -->
+               <Image condition="beings with">C:\Program Files (x86)\WK\ProSystem fx Suite\Install and Update\SaaS</Image> 
+               <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
+            </Rule>
+            <Rule groupRelation="and">
+               <!--Citrix updater -->
+               <Image condition="contains all">C:\Users\;\AppData\Local\Temp\;\CitrixReceiverUpdater.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
+            </Rule>                 
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

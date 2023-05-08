@@ -1084,6 +1084,10 @@
           <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.SettingsHost.exe</Image>
           <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
         </Rule>
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.Host.AnyCPU.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
+        </Rule>
       </ImageLoad>
     </RuleGroup>
     <!-- Event ID 8 == CreateRemoteThread - Excludes -->
@@ -1405,6 +1409,14 @@
     <RuleGroup groupRelation="or">
       <FileCreate onmatch="exclude">
         <Rule groupRelation="and">
+          <Image condition="beings with">C:\Program Files (x86)\WK\ProSystem fx Suite\Install and Update\SaaS</Image>
+          <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Users\;\AppData\Local\Temp\;\CitrixReceiverUpdater.exe</Image>
+          <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
           <Image condition="is">C:\Program Files (x86)\Citrix\ICA Client\Receiver\Receiver.exe</Image>
           <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
         </Rule>
@@ -1504,6 +1516,12 @@
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\SoftwareProtectionPlatform\SvcRestartTask</TargetFilename>
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerRoleUsageCollector</TargetFilename>
         <TargetFilename condition="begin with">C:\Windows\System32\Tasks\Microsoft\Windows\Customer Experience Improvement Program\Server\ServerCeipAssistant</TargetFilename>
+        <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\;TiClientCoreLauncher.exe</TargetFilename>
+        <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\;TiClientStandalone.exe</TargetFilename>
+        <Rule groupRelation="and">
+          <Image condition="contains all">c:\Users;AppData\Local\Temp\;TiLauncher.exe</Image>
+          <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\Techinline\;TiClientCore.exe</TargetFilename>
+        </Rule>
         <Rule groupRelation="and">
           <Image condition="is">C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\ServiceHub\Services\Microsoft.VisualStudio.Setup.Service\BackgroundDownload.exe</Image>
           <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp</TargetFilename>

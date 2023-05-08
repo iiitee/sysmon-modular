@@ -1,0 +1,15 @@
+<Sysmon schemaversion="4.30">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="exclude">
+        <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\;TiClientCoreLauncher.exe</TargetFilename>
+        <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\;TiClientStandalone.exe</TargetFilename>
+        <Rule groupRelation="and">
+            <!--techinline client-->
+            <Image condition="contains all">c:\Users;AppData\Local\Temp\;TiLauncher.exe</Image> 
+            <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp\Techinline\;TiClientCore.exe</TargetFilename>
+        </Rule>        
+      </FileCreate>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
