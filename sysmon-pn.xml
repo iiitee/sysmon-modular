@@ -1081,11 +1081,7 @@
           <ImageLoaded condition="begin with">C:\Program Files\PowerShell\7\System.Management.Automation.dll</ImageLoaded>
         </Rule>
         <Rule groupRelation="and">
-          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.SettingsHost.exe</Image>
-          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
-        </Rule>
-        <Rule groupRelation="and">
-          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub;ServiceHub.Host.AnyCPU.exe</Image>
+          <Image condition="contains all">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\ServiceHub\;ServiceHub</Image>
           <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
         </Rule>
       </ImageLoad>
