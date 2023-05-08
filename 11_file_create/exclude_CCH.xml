@@ -4,7 +4,7 @@
          <FileCreate onmatch="exclude">
             <Rule groupRelation="and">
                <!--CCH update -->
-               <Image condition="beings with">C:\Program Files (x86)\WK\ProSystem fx Suite\Install and Update\SaaS</Image> 
+               <Image condition="begins with">C:\Program Files (x86)\WK\ProSystem fx Suite\Install and Update\SaaS</Image> 
                <TargetFilename condition="contains all">c:\Users\;\AppData\Local\Temp\</TargetFilename>
             </Rule>
             <Rule groupRelation="and">
