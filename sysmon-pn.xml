@@ -1475,7 +1475,7 @@
           <TargetFilename condition="contains all">c:\Users;AppData\Local\Temp;GoogleUpdateSetup.exe</TargetFilename>
         </Rule>
         <Rule groupRelation="and">
-          <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
+          <Image condition="contains all">C:\Program Files;\Google\Chrome\Application\chrome.exe</Image>
           <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\chrome</TargetFilename>
         </Rule>
         <Rule groupRelation="and">

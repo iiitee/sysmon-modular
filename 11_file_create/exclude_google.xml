@@ -9,7 +9,7 @@
             </Rule>
             <Rule groupRelation="and">
                <!--Google Chrome updating-->
-               <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+               <Image condition="contains all">C:\Program Files;\Google\Chrome\Application\chrome.exe</Image> 
                <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp\chrome</TargetFilename>
             </Rule>
          </FileCreate>
