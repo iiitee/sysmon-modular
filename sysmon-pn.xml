@@ -1045,6 +1045,10 @@
           <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
         </Rule>
         <Rule groupRelation="and">
+          <Image condition="contains all">C:\Windows\Microsoft.NET\Framework;mscorsvw.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.dll</ImageLoaded>
+        </Rule>
+        <Rule groupRelation="and">
           <Image name="technique_id=T1137,technique_name=Office Application Startup" condition="end with">VSTOInstaller.exe</Image>
           <ImageLoaded condition="begin with">C:\Windows\</ImageLoaded>
         </Rule>
@@ -1410,6 +1414,10 @@
         </Rule>
         <Rule groupRelation="and">
           <Image condition="contains all">C:\Users\;\AppData\Local\Temp\;\CitrixReceiverUpdater.exe</Image>
+          <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Program Files (x86)\CheckPoint\SmartConsole\;SmartConsole.exe</Image>
           <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
         </Rule>
         <Rule groupRelation="and">

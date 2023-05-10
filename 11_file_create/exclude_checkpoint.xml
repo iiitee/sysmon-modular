@@ -1,0 +1,13 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+      <RuleGroup name="" groupRelation="or">
+         <FileCreate onmatch="exclude">
+            <Rule groupRelation="and">
+               <!--Checkpoint smartconsole -->
+               <Image condition="contains all">C:\Program Files (x86)\CheckPoint\SmartConsole\;SmartConsole.exe</Image> 
+               <TargetFilename condition="contains all">C:\Users\;\AppData\Local\Temp</TargetFilename>
+            </Rule>                 
+         </FileCreate>
+      </RuleGroup>
+   </EventFiltering>
+</Sysmon>

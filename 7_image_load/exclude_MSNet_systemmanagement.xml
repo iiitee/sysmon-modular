@@ -6,6 +6,10 @@
           <Image condition="contains all">C:\Windows\Microsoft.NET\Framework;mscorsvw.exe</Image>
           <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.ni.dll</ImageLoaded>
         </Rule>
+        <Rule groupRelation="and">
+          <Image condition="contains all">C:\Windows\Microsoft.NET\Framework;mscorsvw.exe</Image>
+          <ImageLoaded condition="contains all">C:\Windows\assembly\NativeImages;System.Management.Automation.dll</ImageLoaded>
+        </Rule>        
       </ImageLoad>
     </RuleGroup>
   </EventFiltering>
