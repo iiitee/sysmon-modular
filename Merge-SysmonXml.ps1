@@ -146,6 +146,9 @@ function Merge-AllSysmonXml
             $doc = [xml]::new()
             Write-Verbose "Loading doc from '$FilePath'..."
             $doc.Load($FilePath)
+            if(!$?){
+                Write-Error "Could not load file '$FilePath'"
+            }
             if(-not $PreserveComments){
                 Write-Verbose "Stripping comments for '$FilePath'"
                 $commentNodes = $doc.SelectNodes('//comment()')
@@ -529,10 +532,6 @@ function Merge-SysmonXml
     <!-- Event ID 23 == File Delete and overwrite events which saves a copy to the archivedir - Includes -->
     <RuleGroup groupRelation="or">
         <FileDelete onmatch="include"/>
-    </RuleGroup>
-    <!-- Event ID 23 == File Delete and overwrite events - Excludes -->
-    <RuleGroup groupRelation="or">
-        <FileDelete onmatch="exclude"/>
     </RuleGroup>
     <!-- Event ID 24 == Clipboard change events, only captures text, not files - Includes -->
     <RuleGroup groupRelation="or">
